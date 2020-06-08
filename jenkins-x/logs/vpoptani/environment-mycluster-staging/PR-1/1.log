@@ -1,0 +1,40 @@
+
+Showing logs for build [32mvpoptani-environment-mycluster-dcntr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-jsbgd[0m
+{"level":"info","ts":1591625971.296151,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591625971.296539,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mvpoptani-environment-mycluster-dcntr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-84ftq[0m
+{"level":"info","ts":1591625971.8198037,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1591625971.8207161,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mvpoptani-environment-mycluster-dcntr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mvpoptani-environment-mycluster-dcntr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-vpoptani-environment-mycluster-dcntr-mcn6z[0m
+{"level":"info","ts":1591625976.9629805,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591625977.1610303,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/********/environment-mycluster-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mvpoptani-environment-mycluster-dcntr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:1b42cd9abe072a1d462a3ac0f48ae4bbc0a9ae39,1:ddca801d4181d0e2551e3afb2a66b48311161795
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow ddca801d4181d0e2551e3afb2a66b48311161795: 1b42cd9abe072a1d462a3ac0f48ae4bbc0a9ae39:
+DEBUG: ran git fetch --unshallow origin ddca801d4181d0e2551e3afb2a66b48311161795: 1b42cd9abe072a1d462a3ac0f48ae4bbc0a9ae39: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 1b42cd9abe072a1d462a3ac0f48ae4bbc0a9ae39
+DEBUG: ran git reset --hard 1b42cd9abe072a1d462a3ac0f48ae4bbc0a9ae39 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge ddca801d4181d0e2551e3afb2a66b48311161795
+DEBUG: ran git merge ddca801d4181d0e2551e3afb2a66b48311161795 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 1b42cd9abe072a1d462a3ac0f48ae4bbc0a9ae39..HEAD
+Merged SHA ddca801d4181d0e2551e3afb2a66b48311161795 with commit message 'chore: Promote hls2 to version 0.0.95' into base branch master
+
+Showing logs for build [32mvpoptani-environment-mycluster-dcntr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
